@@ -124,11 +124,11 @@ void usart_open() {
     GCLK->PCHCTRL[BOOT_GCLK_ID_SLOW].reg = GCLK_PCHCTRL_GEN_GCLK3_Val | (1 << GCLK_PCHCTRL_CHEN_Pos);
 
     MCLK->BOOT_USART_MASK.reg |= BOOT_USART_BUS_CLOCK_INDEX ;
+    #endif
+
     /* Baud rate 115200 - clock 48MHz -> BAUD value-63018 */
     uart_basic_init(BOOT_USART_MODULE, 63018, BOOT_USART_PAD_SETTINGS);
     #endif
-
-
 
     // Initialize flag
     b_sharp_received = false;
