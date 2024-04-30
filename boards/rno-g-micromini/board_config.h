@@ -7,7 +7,7 @@
 #define INDEX_URL "https://rno-g.org"
 #define BOARD_ID "RNO-G-UMINI"
 
-#define USB_VID 0x03EB
+#define USB_VID 0x04d8
 #define USB_PID 0xE5C2
 
 
